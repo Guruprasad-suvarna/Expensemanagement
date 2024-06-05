@@ -1,0 +1,68 @@
+/* Expense.css */
+
+/* Set background image for the body */
+body {
+  background-image: url('/public/cash.jpg'); /* Use the correct path relative to the public folder */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Keep the background image fixed while scrolling */
+}
+
+/* Container styles */
+.container {
+  position: relative; /* Ensure that the container establishes a new stacking context */
+  z-index: 2; /* Ensure the container is in front of the body */
+}
+
+/* Adjusted width of user columns */
+.user-column {
+  display: inline-block;
+  margin: 0 10px; /* Adjust spacing between columns */
+  vertical-align: top; /* Align user tables to the top */
+  white-space: normal; /* Allow normal wrapping of content within user tables */
+  width: calc(
+    33% - 20px
+  ); /* Set the width to one-third of the viewport width minus margins */
+}
+
+.scroll-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: calc(
+    100vh - 100px
+  ); /* Set maximum height to fill the viewport minus header height */
+}
+
+/* Fixed header styles */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Optional: Set background color */
+  z-index: 999; /* Optional: Set a high z-index to ensure it's above other content */
+}
+
+/* Adjusted width of week buttons */
+.week-button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.week-button:hover {
+  background-color: #0aedf5; /* Darker green */
+}
+
+/* Adjusted width of calendar input */
+.controls .calendar-input {
+  width: 150px; /* Adjust width as needed */
+}
